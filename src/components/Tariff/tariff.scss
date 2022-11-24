@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;600&display=swap');
+
+.tariff {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 110px;
+    max-width: 160px;
+    border: 1px solid white;
+
+    &__name {
+        padding: 4%;
+        font-size: 1em;
+        border-bottom: 1px solid white;
+        color: white;
+    }
+
+    &__price {
+        position: relative;
+        margin: 2rem 0;
+        padding: 10%;
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+
+        &::before {
+            content: "руб";
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-size: 0.3em;
+        }
+
+        &::after {
+            content: "/мес";
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            font-size: 0.3em;
+        }
+    }
+
+    &__speed {
+        padding: 4%;
+        background-color: #f6f6f6;
+        color: #636364;
+        font-size: 0.8em;
+
+    }
+
+    &__info {
+        padding: 4%;
+        background-color: #eeeeee;
+        color: #636364;
+        font-size: 0.8em;
+        line-height: 200%;
+    }
+}
+
+.deep_blue{
+    background-color: #1c9dad;
+}
+.blue {
+    background-color: #28c2d6;
+}
+
+.deep_green{
+    background-color: #198a73;
+}
+
+.green {
+    background-color: #1fb08e;
+}
+.deep_red{
+    background-color: #c5544d;
+}
+.red {
+    background-color: #f46a5f;
+}
+.deep_black{
+    background-color: #232b34;
+}
+.black {
+    background-color: #303742;
+}
+
+.selected {
+    transform: scale(1.1);
+    box-shadow: rgba(75, 75, 75, 0.2) 0px 2px 8px 0px;
+}
