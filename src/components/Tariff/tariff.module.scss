@@ -1,75 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;600&display=swap');
 
+@mixin main_text {
+    padding: 4%;
+    color: #636364;
+    font-size: 0.9em;
+}
+
+@mixin text_position {
+    position: absolute;
+    font-size: 0.3em;
+}
+
 .tariff {
     display: flex;
     flex-direction: column;
     text-align: center;
     min-width: 110px;
-    max-width: 160px;
+    max-width: 200px;
     border: 1px solid white;
-    border-radius: 1rem 1rem 0 0;
 
     &__name {
+        padding: 4%;
         font-size: 1em;
         border-bottom: 1px solid white;
         color: white;
-        padding: 4%;
     }
 
     &__price {
+        position: relative;
+        margin: 2rem 0;
+        padding: 10%;
         font-size: 3rem;
         font-weight: 600;
-        position: relative;
         color: white;
-        padding: 10%;
-        margin: 2rem 0;
 
         &::before {
             content: "руб";
-            position: absolute;
-            font-size: 0.3em;
+            @include text_position;
             top: 0.5rem;
             left: 0.5rem;
         }
 
         &::after {
             content: "/мес";
-            position: absolute;
-            font-size: 0.3em;
+            @include text_position;
             bottom: 0.5rem;
             right: 0.5rem;
         }
     }
 
     &__speed {
-        background-color: #f6f6f6;
-        color: #9d9d9f;
-        font-size: 0.8em;
-        padding: 4%;
+        @include main_text;
+        background-color: #f9f6f6;
     }
 
     &__info {
+        @include main_text;
         background-color: #eeeeee;
-        color: #9d9d9f;
-        font-size: 0.8em;
-        padding: 4%;
+        line-height: 200%;
     }
 }
 
+.deep_blue {
+    background-color: #1c9dad;
+}
+
 .blue {
-    background-color: #2cc1d4;
+    background-color: #28c2d6;
+}
+
+.deep_green {
+    background-color: #198a73;
 }
 
 .green {
-    background-color: #24ae8d;
+    background-color: #1fb08e;
+}
+
+.deep_red {
+    background-color: #c5544d;
 }
 
 .red {
     background-color: #f46a5f;
 }
 
+.deep_black {
+    background-color: #232b34;
+}
+
 .black {
-    background-color: #333a44;
+    background-color: #303742;
 }
 
 .selected {
