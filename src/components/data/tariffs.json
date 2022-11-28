@@ -6,7 +6,8 @@
       "speed": 10,
       "info": "Объем включенного трафика не ограничен",
       "color": "blue",
-      "title_color": "deep_blue"
+      "title_color": "deep_blue",
+      "isSelected": false
     },
     {
       "id": 2,
@@ -15,7 +16,8 @@
       "speed": 50,
       "info": "Объем включенного трафика не ограничен",
       "color": "green",
-      "title_color": "deep_green"
+      "title_color": "deep_green",
+      "isSelected": false
     },
     {
       "id": 3,
@@ -24,7 +26,8 @@
       "speed": 100,
       "info": "Объем включенного трафика не ограничен",
       "color": "red",
-      "title_color": "deep_red"
+      "title_color": "deep_red",
+      "isSelected": true
     },
     {
       "id": 4,
@@ -33,6 +36,7 @@
       "speed": 200,
       "info": "Объем включенного трафика не ограничен",
       "color": "black",
-      "title_color": "deep_black"
+      "title_color": "deep_black",
+      "isSelected": false
     }
   ]
