@@ -1,7 +1,7 @@
 import React from 'react'
 import './tariff.scss'
 
-export default function Price(props) {
+export default function Tariff(props) {
     return (
         <div className={`tariff ${props.color} ${props.isSelected ? "selected" : ""}`}>
             <div className={`tariff__name ${props.title_color}`}>{props.name}</div>

@@ -1,5 +1,12 @@
 .App {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first_option,
+.sec_option{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2rem;
