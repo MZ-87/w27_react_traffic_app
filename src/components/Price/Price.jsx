@@ -4,8 +4,8 @@ import './price.scss'
 export default function Price(props) {
     let selected = '';
     const [checked, setChecked] = useState(false);
-    const handleClick = (e) => {
-        setChecked(prevState => !prevState);
+    const handleClick = () => {
+        setChecked(checked => !checked);
     };
     selected = checked ? "selected" : "";
 
