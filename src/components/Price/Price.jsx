@@ -5,7 +5,7 @@ export default function Price(props) {
     let selected = '';
     const [checked, setChecked] = useState(false);
     const handleClick = () => {
-        setChecked(!checked);
+        setChecked(prevState => !prevState);
     };
     selected = checked ? "selected" : "";
 
