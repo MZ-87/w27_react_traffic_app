@@ -10,7 +10,7 @@ export default function Price(props) {
     selected = checked ? "selected" : "";
 
     return (
-        <div div onClick={handleClick} className={`tariff ${props.color} ${selected}`}>
+        <div onClick={handleClick} className={`tariff ${props.color} ${selected}`}>
             <div className={`tariff__name ${props.title_color}`}>{props.name}</div>
             <div className="tariff__price">{props.price}</div>
             <div className="tariff__speed">до {props.speed} Мбит/сек</div>
