@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './price.scss'
 
-export default function Price(props) {
+export default function Price({ item }) {
+    const { color, title_color, price, speed, info, name } = item;
     let selected = '';
     const [checked, setChecked] = useState(false);
     const handleClick = () => {
@@ -10,11 +11,11 @@ export default function Price(props) {
     selected = checked ? "selected" : "";
 
     return (
-        <div onClick={handleClick} className={`tariff ${props.color} ${selected}`}>
-            <div className={`tariff__name ${props.title_color}`}>{props.name}</div>
-            <div className="tariff__price">{props.price}</div>
-            <div className="tariff__speed">до {props.speed} Мбит/сек</div>
-            <div className="tariff__info">{props.info}</div>
+        <div onClick={handleClick} className={`tariff ${color} ${selected}`}>
+            <div className={`tariff__name ${title_color}`}>{name}</div>
+            <div className="tariff__price">{price}</div>
+            <div className="tariff__speed">до {speed} Мбит/сек</div>
+            <div className="tariff__info">{info}</div>
         </div>
     )
 }

@@ -1,13 +1,14 @@
 import React from 'react'
 import './tariff.scss'
 
-export default function Tariff(props) {
+export default function Tariff({ tariff }) {
+    const { color, title_color, price, speed, info, isSelected, name } = tariff;
     return (
-        <div className={`tariff ${props.color} ${props.isSelected ? "selected" : ""}`}>
-            <div className={`tariff__name ${props.title_color}`}>{props.name}</div>
-            <div className="tariff__price">{props.price}</div>
-            <div className="tariff__speed">до {props.speed} Мбит/сек</div>
-            <div className="tariff__info">{props.info}</div>
+        <div className={`tariff ${color} ${isSelected ? "selected" : ""}`}>
+            <div className={`tariff__name ${title_color}`}>{name}</div>
+            <div className="tariff__price">{price}</div>
+            <div className="tariff__speed">до {speed} Мбит/сек</div>
+            <div className="tariff__info">{info}</div>
         </div>
     )
 }

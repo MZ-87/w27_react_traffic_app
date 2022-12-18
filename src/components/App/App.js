@@ -11,9 +11,8 @@ function App() {
       <div className={style.App}>
         <p>Список как на картинке</p>
       <div className={style.first_option}>
-      {
-        tariffs.map((tariff)=>{
-        return <Tariff key={tariff.id}  name={tariff.name} price={tariff.price} speed={tariff.speed} info={tariff.info} color={tariff.color} title_color={tariff.title_color} isSelected={tariff.isSelected}/>
+      {tariffs.filter(tariff => tariff.price > 400).map((tariff)=>{
+        return <Tariff key={tariff.id}  tariff={{...tariff}}/>
         })
       }
       </div>
@@ -21,8 +20,9 @@ function App() {
       <p>Интерактивный список</p>
       <div className={style.sec_option}>
     {
-        prices.map((price)=>{
-        return <Price key={price.id}  name={price.name} price={price.price} speed={price.speed} info={price.info} color={price.color} title_color={price.title_color}/>
+        prices.map((item)=>{
+        if (item.price > 500)
+        return <Price key={item.id} item={{...item}}/>
         })
       }
       </div>
